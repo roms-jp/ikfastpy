@@ -1,3 +1,4 @@
 build/*
 ikfastpy.cpp
 *.so
+*.egg-info/*
