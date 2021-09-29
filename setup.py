@@ -4,7 +4,9 @@ from Cython.Distutils import build_ext
 
 setup(
     name='ikfastpy',
-    packages=["ikfastpy"],
+    version='0.0.1',
+    package_dir={'ikfastpy': ''},
+    packages=['ikfastpy'],
     ext_modules=[
         Extension(
             "ikfastpy",
