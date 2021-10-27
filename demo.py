@@ -1,11 +1,15 @@
 import numpy as np
 import ikfastpy
 
+DEG_TO_RAD = float(np.pi) / 180.0
+RAD_TO_DEG = 180.0 / float(np.pi)
+
 # Initialize kinematics for UR5 robot arm
 ur5_kin = ikfastpy.PyKinematics()
 n_joints = ur5_kin.getDOF()
 
-joint_angles = [-3.1,-1.6,1.6,-1.6,-1.6,0.] # in radians
+# joint_angles = [-3.1,-1.6,1.6,-1.6,-1.6,0.]  # in radians
+joint_angles = np.array([33.19, 19.74, -52.80 + (19.74), 0.29, -41.86, 0.06]) * DEG_TO_RAD
 
 # Test forward kinematics: get end effector pose from joint angles
 print("\nTesting forward kinematics:\n")
