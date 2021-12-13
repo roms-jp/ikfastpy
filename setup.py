@@ -9,7 +9,7 @@ setup(
     packages=['ikfastpy'],
     ext_modules=[
         Extension(
-            ".",
+            "ikfastpy",
             ["ikfastpy.pyx", "ikfast_wrapper.cpp"],
             language="c++",
             libraries=['lapack']
